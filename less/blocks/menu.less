@@ -1,0 +1,27 @@
+.menu__btn {
+  display: none;
+}
+
+.menu__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__item {
+  margin-left: 11px;
+  margin-right: 11px;
+  font-family: "Tahoma", "Arial", sans-serif;
+  color: #0772b9;
+  text-transform: uppercase;
+  .transition();
+  
+  &:hover,
+  &:active,
+  &--active {
+    color: #d9fee5;
+    .transition();
+  }
+}

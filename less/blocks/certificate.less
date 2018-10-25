@@ -1,0 +1,137 @@
+.certificate {
+  padding-top: 95px;
+  .border-gradient();
+  background-image: url(../img/bg-3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.certificate__block {
+  position: relative;
+  width: 914px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px;
+  padding: 20px;
+  border: 10px solid #23e899;
+  border-radius: 30px;
+  
+  .title {
+    margin-top: 0;
+    margin-bottom: 75px;
+    text-align: left;
+  }
+}
+
+.certificate__user {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  right: 15px;
+  padding-top: 100px;
+  width: 130px;
+  font-size: 13px;
+  color: #d9fee5;
+  line-height: 1;
+  text-align: center;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    left: 50%;
+    width: 54px;
+    height: 78px;
+    transform: translateX(-50%);
+    background-image: url(../img/icon-5.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .round(95px);
+  }
+}
+
+.certificate__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.certificate__item {
+  width: 255px;
+  text-align: center;
+  font-family: "Tahoma", "Arial", sans-serif;
+  
+  p {
+    margin: 0;
+  }
+  
+  .certificate__slogan  {
+    margin: 10px auto;
+  }
+  
+  .certificate__ref {
+    margin-top: 15px;
+  }
+}
+
+.certificate__top {
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #c8ffdc;
+  border: 10px solid #23e899;
+  border-radius: 30px;
+}
+
+.certificate__bottom {
+  padding: 10px;
+  border: 10px solid #23e899;
+  border-radius: 30px;
+  
+  a {
+    display: block;
+    color: #02365e;
+    font-size: 22px;
+    background-color: #23e899;
+    border-radius: 12px;
+  }
+  
+  &--small a {
+    padding: 5px;
+    font-size: 17px;
+    line-height: 1;
+  }
+}
+
+.certificate__price {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.certificate__slogan {
+  max-width: 160px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #23e899;
+}
+
+.certificate__comment {
+  font-size: 10px;
+}
+
+.certificate__ref {
+  font-size: 22px;
+}
