@@ -5,13 +5,14 @@
   <meta name="robots" content="noindex">
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Bin-invest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="header">
     <div class="wrapper header__wrap">
       <div class="logo">
-        <img src="img/logo.png" alt="Logo" width="276" height="67">
+        <img src="img/logo.png" alt="Logo" width="239" height="58">
       </div>
       <nav class="menu">
         <button type="button" class="menu__btn" title="Menu"></button>
@@ -36,7 +37,7 @@
         <div class="promo__top">
           <ul class="promo__list">
             <li class="promo__item">
-              <a href="#">
+              <a data-fancybox data-src="#call" href="javascript:;">
                 <figure class="promo__img">
                   <img src="img/icon-1.png" alt="Региcтрация" width="55" height="68">
                 </figure>
@@ -115,7 +116,7 @@
             <figure class="benefits__img">
               <img src="img/benefit-5.png" alt="Партнёрская программа бонус до 5 %" width="140" height="140">
             </figure>
-            <span>Партнёрская программа бонус до 5 %</span>
+            <span>Партнёрская<br>программа<br>бонус до 5 %</span>
           </li>
           <li class="benefits__item">
             <figure class="benefits__img">
@@ -291,6 +292,24 @@
     </div>
   </footer>
   
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <form action="#" method="post" class="modal__form">
+      <label for="name" class="modal__label">Имя / Name</label>
+      <input type="text" id="name" class="modal__input" placeholder="Timmi">
+      <label for="email" class="modal__label">E-mail</label>
+      <input type="email" id="email" class="modal__input" placeholder="Timmi@mail.ru">
+      <label for="password" class="modal__label">Пароль / Pass</label>
+      <div class="modal__wrap">
+        <input type="password" id="password" class="modal__input" placeholder="******">
+      </div>
+      <input type="checkbox" id="check" class="modal__checkbox">
+      <label for="check" class="modal__check">Я не робот</label>
+      <button type="submit" class="modal__btn">Регистрация / Sing Up</button>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
 </body>
 </html>
