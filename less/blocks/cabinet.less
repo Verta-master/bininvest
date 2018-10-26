@@ -1,7 +1,11 @@
 .cabinet {
+  width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
   margin-bottom: 100px;
   color: #c8ffdc;
+  font-size: 24px;
 }
 
 .cabinet__header {
@@ -14,18 +18,15 @@
 }
 
 .cabinet__main {
-  padding: 60px;
+  padding: 55px 60px;
   padding-bottom: 90px;
-}
-
-.cabinet__main {
   background-image: linear-gradient(to top, #001732, #013252);
 }
 
 .cabinet__close {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 25px;
   width: 28px;
   height: 30px;
   background-image: url(../img/icon-cross.png);
@@ -39,7 +40,7 @@
   }
   span {
     color: #c8ffdc;
-    font-size: 24px;
+    font-size: 30px;
   }
 }
 
@@ -61,7 +62,7 @@
 
 .cabinet__output {
   width: 140px;
-  height: 47px;
+  height: 48px;
   margin-right: 15px;
   display: flex;
   justify-content: center;
@@ -83,30 +84,62 @@
 }
 
 .cabinet__bin {
-  padding-left: 15px;
-  border-left: 2px solid #23e899;
+  position: relative;
+  padding-left: 10px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 48px;
+    background-color: #23e899;
+  }
 }
 
 .cabinet__title {
-  margin-top: 70px;
+  margin-top: 60px;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
 
+.cabinet__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  text-align: center;
+  padding: 8px 20px;
+  border-bottom: 2px solid #23e899;
+}
+
 .cabinet__table {
   width: 100%;
-  border-collapse: collapse;
+  font-family: "Tahoma", "Arial", sans-serif;
   border: 2px solid #23e899;
   background-image: linear-gradient(to top left, rgba(2,52,94,0.36), rgba(35,232,153,0.36));
   
-  th {
-    font-weight: 400;
-    height: 70px;
-    border-bottom: 2px solid #23e899;
-  }
-  
-  td {
+  span {
+    width: 25%;
     text-align: center;
-    height: 45px;
+  }
+}
+
+.cabinet__body {
+  padding: 20px;
+}
+
+.cabinet__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  
+  &:hover,
+  &:active {
+    background-image: linear-gradient(to top left, rgba(11,100,101,0.25), rgba(35,232,153,0.25));
   }
 }
