@@ -1190,9 +1190,13 @@ button {
   opacity: 0.7;
 }
 .cabinet {
+  width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
   margin-bottom: 100px;
   color: #c8ffdc;
+  font-size: 24px;
 }
 .cabinet__header {
   padding: 20px 60px;
@@ -1214,17 +1218,15 @@ button {
   background-image: linear-gradient(to right, #23e899, #023157);
 }
 .cabinet__main {
-  padding: 60px;
+  padding: 55px 60px;
   padding-bottom: 90px;
-}
-.cabinet__main {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#001732), to(#013252));
   background-image: linear-gradient(to top, #001732, #013252);
 }
 .cabinet__close {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 25px;
   width: 28px;
   height: 30px;
   background-image: url(../img/icon-cross.png);
@@ -1236,7 +1238,7 @@ button {
 }
 .cabinet__icon span {
   color: #c8ffdc;
-  font-size: 24px;
+  font-size: 30px;
 }
 .cabinet__line {
   display: -webkit-box;
@@ -1259,7 +1261,7 @@ button {
 }
 .cabinet__output {
   width: 140px;
-  height: 47px;
+  height: 48px;
   margin-right: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1290,33 +1292,78 @@ button {
           align-items: center;
 }
 .cabinet__bin {
-  padding-left: 15px;
-  border-left: 2px solid #23e899;
+  position: relative;
+  padding-left: 10px;
+}
+.cabinet__bin::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 3px;
+  height: 48px;
+  background-color: #23e899;
 }
 .cabinet__title {
-  margin-top: 70px;
+  margin-top: 60px;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
+.cabinet__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  text-align: center;
+  padding: 8px 20px;
+  border-bottom: 2px solid #23e899;
+}
 .cabinet__table {
   width: 100%;
-  border-collapse: collapse;
+  font-family: "Tahoma", "Arial", sans-serif;
   border: 2px solid #23e899;
   background-image: -webkit-gradient(linear, right bottom, left top, from(rgba(2, 52, 94, 0.36)), to(rgba(35, 232, 153, 0.36)));
   background-image: linear-gradient(to top left, rgba(2, 52, 94, 0.36), rgba(35, 232, 153, 0.36));
 }
-.cabinet__table th {
-  font-weight: 400;
-  height: 70px;
-  border-bottom: 2px solid #23e899;
-}
-.cabinet__table td {
+.cabinet__table span {
+  width: 25%;
   text-align: center;
-  height: 45px;
+}
+.cabinet__body {
+  padding: 20px;
+}
+.cabinet__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.cabinet__row:hover,
+.cabinet__row:active {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(rgba(11, 100, 101, 0.25)), to(rgba(35, 232, 153, 0.25)));
+  background-image: linear-gradient(to top left, rgba(11, 100, 101, 0.25), rgba(35, 232, 153, 0.25));
 }
 @media (max-width: 1040px) {
   .wrapper {
     width: 100%;
+  }
+  .cabinet {
+    width: 90%;
   }
 }
 @media (max-width: 1000px) {
@@ -1390,6 +1437,9 @@ button {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .cabinet {
+    font-size: 20px;
+  }
 }
 @media (max-width: 766px) {
   .footer__wrap .menu {
@@ -1431,6 +1481,25 @@ button {
   }
   .info__wrap {
     padding-left: 0;
+  }
+  .cabinet__icon span {
+    font-size: 24px;
+  }
+  .cabinet__main {
+    padding: 30px;
+  }
+  .cabinet__header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .cabinet__line {
+    display: block;
+  }
+  .cabinet__block {
+    margin-bottom: 20px;
+  }
+  .cabinet {
+    font-size: 18px;
   }
 }
 @media (max-width: 480px) {
@@ -1491,5 +1560,22 @@ button {
   .menu__item {
     margin-top: 5px;
     margin-bottom: 5px;
+  }
+  .cabinet__score {
+    display: block;
+  }
+  .cabinet__output {
+    margin-bottom: 10px;
+  }
+  .cabinet__table {
+    font-size: 14px;
+  }
+  .cabinet__head {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 10px;
+  }
+  .cabinet__body {
+    padding: 0;
   }
 }
